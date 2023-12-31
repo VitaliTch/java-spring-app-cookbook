@@ -1,0 +1,1 @@
+curl --location 'http://localhost:8080/appcookbook/api/v1/public/accounts/ACC001/users/testuser'
