@@ -24,8 +24,9 @@ It compiles and runs; the API endpoint can be tested with a provided cURL reques
 - Spring Security 6.2.1
 - Spring Data MongoDB 4.2.1
 - Mongo Java Driver 4.11.1
+- Apache Commons lang3 for handling Strings
 - Lombok 1.18.28 is used for code generation of constructors, builders, and getter and setter methods
-- Logging: logback
+- Logging: Logback (with SLF4J facade); user/request tracing via MDC
 - Source Control and Build: Git (GitHub) & Maven
 - Static code analysis via SonarLint (IntelliJ plugin)
 - Testing: Postman 10.21.9 and cURL
@@ -39,6 +40,11 @@ It compiles and runs; the API endpoint can be tested with a provided cURL reques
 - The service layer accesses data via Repository classes and operates with @Document annotated entity classes
 - Data in the Controller tier are decoupled from the data in the Persistent tier to comply with security considerations (Ref.: https://o2platform.files.wordpress.com/2011/07/ounce_springframework_vulnerabilities.pdf)
 - Services perform mapping of data between DTO (Data Transfer Object) instances and Entity objects (Mongo Documents)
+
+## Cookbook's Recipes
+- `ApiSecurityConfiguration` - provides the 1st security layer of access control to the API based on the HTTP request paths
+- `RequestMonitoringFilter` - a custom filter that generates and "injects" a unique request ID into SLF4J `MCD` logging allowing "cross-cut" tracing of request processing across the full execution path.
+- `UserDetailsData` - a DTO (Data Transfer Object) implemented as Java's 14 (finalized in 16) Record type to decouple data transmission between external sources and persistent storage. 
 
 ## Build and run
 - The app is based on Spring Boot; the parent pom: `spring-boot-starter-parent`

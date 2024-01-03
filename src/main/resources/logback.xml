@@ -2,7 +2,7 @@
     <!-- Console Appender -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d %-5level [%thread] %logger{0} XForwarderFor=%mdc{XForwardedFor} UIRequestUUID=%mdc{UIRequestUUID} RequestID=%mdc{RequestID} UserID=%mdc{UserID} : %msg%n</pattern>
+            <pattern>%d %-5level [%thread] %logger{0} RemoteAddr=%mdc{RemoteAddr} RequestID=%mdc{RequestID} UserID=%mdc{UserID} : %msg%n</pattern>
         </encoder>
     </appender>
     <!-- Rolling File Appender to    -->
