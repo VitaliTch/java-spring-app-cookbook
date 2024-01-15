@@ -1,4 +1,4 @@
-package com.algocrafters.app.cookbook;
+package com.algocrafters.app.cookbook.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

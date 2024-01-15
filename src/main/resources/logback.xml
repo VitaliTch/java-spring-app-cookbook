@@ -17,14 +17,14 @@
         </encoder>
     </appender>
     <!-- Change the level to DEBUG or even TRACE only when troubleshooting Security Filters and path mappings -->
-<!--    <logger name="org.springframework.security" level="INFO" additivity="false">-->
-<!--        <appender-ref ref="STDOUT" />-->
-<!--        <appender-ref ref="ROLLING_FILE" />-->
-<!--    </logger>-->
-<!--    <logger name="org.springframework.data" level="INFO" additivity="false">-->
-<!--        <appender-ref ref="STDOUT" />-->
-<!--        <appender-ref ref="ROLLING_FILE" />-->
-<!--    </logger>-->
+    <logger name="org.springframework.security" level="INFO" additivity="false">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="ROLLING_FILE" />
+    </logger>
+    <logger name="org.springframework.data" level="TRACE" additivity="false">
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="ROLLING_FILE" />
+    </logger>
     <!-- ROOT LOGGER -->
     <root level="INFO">
         <appender-ref ref="STDOUT" />
