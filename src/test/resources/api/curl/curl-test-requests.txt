@@ -1,1 +1,5 @@
+#
 curl --location 'http://localhost:8080/appcookbook/api/v1/public/accounts/ACC001/users/testuser'
+
+# Travel (Couchbase travel-sample bucket)
+curl --location 'http://localhost:8080/appcookbook/api/v1/public/travel/airlines' --header 'Content-Type: application/json'

@@ -38,5 +38,4 @@ public class UserCustomerAccountsController {
 
         return ResponseEntity.of(userDetailsData);
     }
-
 }
